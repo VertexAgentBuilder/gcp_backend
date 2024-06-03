@@ -227,6 +227,42 @@ Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the
 
 - `MainChat` agent sends the `resolution_status` along with `issue_category` and `conversation` to a GCP function using `sessionend` tool.
 
+**User**: "I have another query regarding my recent purchase."
+
+- `MainChat` agent routes the context to `BillingPayment` agent.
+
+- `BillingPayment` agent asks for the `customer_id`
+
+**User**: "My customer_id is 9p0q1r2s3t4u5v6w"
+
+- `BillingPayment` agent fetches the customer's previous logs and activities using `customerlogs` tool.
+- `BillingPayment` agent asks for the order number
+
+**User**: "The order ID is 987654321. I was charged twice for the same order."
+
+- `BillingPayment` agent fetches the similar conversations from the database using `similarconv` tool.
+- `BillingPayment` agent provides the user with the necessary information.
+
+**User**: "Thank you for the information. I will contact the customer care for the refund."
+
+- `BillingPayment` tells that it will initiate the refund process.
+
+**User**: "Thank you. How long will the refund take?"
+
+- `BillingPayment` tells that the refund will be initiated within 24 hours.
+
+**User**: "Ok. Thanks for the information."
+
+- `BillingPayment` asks if there is anything else the user wants to know.
+
+**User**: "No"
+
+- Handover to `MainChat` agent. `MainChat` agent asks if the user is satisfied with the answer.
+
+**User**: "Yes, I am satisfied with the answer"
+
+- `MainChat` agent sends the `resolution_status` along with `issue_category` and `conversation` to a GCP function using `sessionend` tool.
+
 
 
 ### Type 2:
