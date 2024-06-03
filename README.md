@@ -201,7 +201,7 @@ Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the
 
 - `WarrantyReturns` agent asks for the `customer_id`
 
-**User**: "Yeah sure! My ID is 3r4s5t6u7v8w9x0y"
+**User**: "Yeah sure! My ID is 3f4e5d6f7g8h9i0j"
 
 - `WarrantyReturns` agent fetches the customer's previous logs and activities using `customerlogs` tool.
 - From the logs, it is found that the user has availed the warranty for the product.
