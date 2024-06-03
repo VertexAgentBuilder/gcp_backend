@@ -175,3 +175,70 @@ Sample Input payload:
 
 ## UI Hosted at : [issue-vertex-bot](https://issue-vertex-bot.vercel.app/)
 
+
+
+## Sample Test Cases
+
+List of valid customer_ids: `3f4e5d6f7g8h9i0j`, `7h8i9j0k1l2m3n4o`, `5x6y7z8a9b0c1d2e`, `9p0q1r2s3t4u5v6w`
+
+
+Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the bottom right corner, you can see the chatbot. You can ask the Type 1 queries on clicking it. On clicking 'Policy' button at top right corner, you enter 'https://issue-vertex-bot.vercel.app/policies' page where you can ask the Type 2 queries.
+
+
+### Type 1: 
+
+**User**: "Hi, I have a problem with my product. Can you help me?"
+
+- `MainChat` agent treats this as a general query. So no routing is done. It asks the user to provide more details about the issue.
+
+**User**: "I have availed the warranty for my product. But, I am facing some issues with it."
+
+- `MainChat` agent routes the context to `WarrantyReturns` agent.
+
+- `WarrantyReturns` agent asks for the `customer_id`
+
+**User**: "My customer_id is 9p0q1r2s3t4u5v6w"
+
+- `WarrantyReturns` agent fetches the customer's previous logs and activities using `customerlogs` tool.
+
+**User**: "The product is a laptop and in the warranty portal it is showing that the warranty is yet to be activated. But, I have already activated it."
+
+- `WarrantyReturns` agent fetches the similar conversations from the database using `similarconv` tool.
+- `WarrantyReturns` agent asks for serial number and the date of purchase
+
+**User**: "The serial number is 123456789 and the date of purchase is 2022-01-01"
+
+- `WarrantyReturns` agent provides the user with the necessary information.
+- 'WarrantyReturns' agent says 'It seems that you have not activated the warranty for the product. I will help you with the activation process.'
+
+**User**: "Thank you for the information. I will activate the warranty.
+
+- `WarrantyReturns` asks for if there is anything else the user wants to know
+
+**User**: "No"
+
+- Handover to `MainChat` agent. `MainChat` agent asks if the user is satisfied with the answer.
+
+**User**: "Yes, I am satisfied with the answer"
+
+- `MainChat` agent sends the `resolution_status` along with `issue_category` and `conversation` to a GCP function using `sessionend` tool.
+
+
+
+### Type 2:
+
+**User**: "Hi"
+
+- `PolicyHelperMain` agent treats this as a general query. 
+
+**User**: "I want to know how Xiaomi uses the personal information that is collected from my POCO phone"
+
+- `PolicyHelperMain` agent fetches the company's policies and agreements from the database using `policyhelper` tool.
+- `PolicyHelperMain` agent provides the user with the necessary information.
+
+**User**: "Ok. I have another question, my personal data is safe right?"
+
+- `PolicyHelperMain` agent fetches the company's privacy policies from the database using `policyhelper` tool.
+- `PolicyHelperMain` agent provides the user with the necessary information.
+
+**User**: "Ohh..ok, thanks for the info. That's all for today"
