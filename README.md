@@ -111,3 +111,64 @@ We visualize the data of `issue_category` and `resolution_status` of the user's 
 ## What's next for IssueVertexpert.AI
 - Adding multi-modal support using Gemini Pro Vision models.
 - Deploying the agent publicly so that anyone can access it.
+
+
+
+## Environment Setup And Endpoints
+
+### Requirement
+
+- Python 3.9+
+
+### Installation
+
+- `pip install -r requirements.txt`
+
+### Setting up the environment
+
+```
+COHERE_API_KEY=
+QUDRANT_API_KEY=jFl_
+QUDRANT_URL=https://2e76fa6d-
+MONGO_URL="mongodb+srv:"
+MONGO_DB="vertex"
+SESSION_COLLECTION="session_collection"
+```
+
+### Endpoints
+
+'main.py' contains the endpoints for the tools. It is hosted on `https://us-central1-agentbuilderhackathon.cloudfunctions.net/process_text`
+
+1. `https://us-central1-agentbuilderhackathon.cloudfunctions.net/process_text/logs`
+
+Sample Input payload:
+
+```
+{
+    "customer":"9p0q1r2s3t4u5v6w"
+}
+```
+
+2. `https://us-central1-agentbuilderhackathon.cloudfunctions.net/process_text/simsolution`
+
+Sample Input payload:
+
+```
+{
+    "query":"Yes but on the warranty portal its showing not activated, but I have activated it"
+}
+```
+
+3. `https://us-central1-agentbuilderhackathon.cloudfunctions.net/process_text/sessionend`
+
+Sample Input payload:
+
+```
+[
+    {
+        "issue_category":"Warranty and Returns Issues",
+        "resolution_status":false,
+        "conversation":"The user is satisfied with the answer"
+    }
+]
+```
