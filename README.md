@@ -182,7 +182,7 @@ Sample Input payload:
 List of valid customer_ids: `3f4e5d6f7g8h9i0j`, `7h8i9j0k1l2m3n4o`, `5x6y7z8a9b0c1d2e`, `9p0q1r2s3t4u5v6w`
 
 
-Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the bottom right corner, you can see the chatbot. You can ask the Type 1 queries on clicking it. On clicking 'Policy' button at top right corner, you enter 'https://issue-vertex-bot.vercel.app/policies' page where you can ask the Type 2 queries.
+Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the bottom right corner, you can see the chatbot. You can ask the Type 1 queries on clicking it. On clicking 'Policy' button at top right corner, you enter [https://issue-vertex-bot.vercel.app/policies](https://issue-vertex-bot.vercel.app/policies) page where you can ask the Type 2 queries.
 
 <img src="https://drive.google.com/uc?export=view&id=10SFEyW7fWMUZ4bFQltljwi4NekpTr7jr" alt="Description" width="700" />
 
