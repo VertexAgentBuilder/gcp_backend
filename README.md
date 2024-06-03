@@ -8,6 +8,9 @@
 
 ### Teams and Scopes
 
+<!-- Add image from google drive -->
+![image](https://drive.google.com/uc?export=view&id=<1ns3OuQYeb7_INAuuC-TKIGYnWExhheSx>)
+
 We consider there are several teams for customer care support with their respeective scopes of work. The schema of the team looks like this:
     
     ```
@@ -33,6 +36,8 @@ We consider there are several teams for customer care support with their respeec
 
 ### Agent Builder
 
+![image](https://drive.google.com/uc?export=view&id=<1ns3OuQYeb7_INAuuC-TKIGYnWExhheSx>)
+
 Coming to the Agent Builder Part, firstly we create a `MainChat` agent which analyzes The Customer's Concern and routes to the specialized agent.
 It routes the context to these agents:
 
@@ -45,6 +50,8 @@ It routes the context to these agents:
 4. `BillingPayment`: This agent is responsible for handling the billing and payment issues of the product. It tells the user about the payment methods and the billing details.
 
 When the user asks a question, the `MainChat` agent analyzes the user's question and routes the context to the specialized agent. The specialized agent then answers the user's question. Each specialized agent has its own scope of work. It tries to answer the user's question based on its scope of work. It resolves the user's query and provides the user with the necessary information. When the chat conversation is over, the flow is handed back to the `MainChat` agent. It asks the user if he/she is satisfied with answer. It sends the `resolution_status` along with `issue_category` and `conversation` to a gcp function.
+
+![image](https://drive.google.com/uc?export=view&id=<1ns3OuQYeb7_INAuuC-TKIGYnWExhheSx>)
 
 Seperately there is `PolicyHelperMain` agent which is responsible for handling the policy and agreement related queries. It tells the user about the company's policies and agreements. 
 
