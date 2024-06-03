@@ -6,7 +6,7 @@
 
 ## How we built it
 
-#### Teams and Scopes
+### Teams and Scopes
 
 We consider there are several teams for customer care support with their respeective scopes of work. The schema of the team looks like this:
     
@@ -31,24 +31,24 @@ We consider there are several teams for customer care support with their respeec
     }
     ```
 
-#### Agent Builder
+### Agent Builder
 
 Coming to the Agent Builder Part, firstly we create a `MainChat` agent which analyzes The Customer's Concern and routes to the specialized agent.
 It routes the context to these agents:
 
-`WarrantyReturns` : This agent is responsible for handling the warranty and returns of the product. It checks the warranty of the product and then decides if the product is eligible for return or exchange. It advises the user on the return and exchange policy and tells the user about the procedure to return the product.
+1. `WarrantyReturns` : This agent is responsible for handling the warranty and returns of the product. It checks the warranty of the product and then decides if the product is eligible for return or exchange. It advises the user on the return and exchange policy and tells the user about the procedure to return the product.
 
-`TechnicalIssues`: This agent is responsible for handling the technical issues of the product.
+2. `TechnicalIssues`: This agent is responsible for handling the technical issues of the product.
 
-`ProductEnquiry`: This agent is responsible for handling the product enquiry of the product. It tells the user about the product details and the availability of the product.
+3. `ProductEnquiry`: This agent is responsible for handling the product enquiry of the product. It tells the user about the product details and the availability of the product.
 
-`BillingPayment`: This agent is responsible for handling the billing and payment issues of the product. It tells the user about the payment methods and the billing details.
+4. `BillingPayment`: This agent is responsible for handling the billing and payment issues of the product. It tells the user about the payment methods and the billing details.
 
 When the user asks a question, the `MainChat` agent analyzes the user's question and routes the context to the specialized agent. The specialized agent then answers the user's question. Each specialized agent has its own scope of work. It tries to answer the user's question based on its scope of work. It resolves the user's query and provides the user with the necessary information. When the chat conversation is over, the flow is handed back to the `MainChat` agent. It asks the user if he/she is satisfied with answer. It sends the `resolution_status` along with `issue_category` and `conversation` to a gcp function.
 
 Seperately there is `PolicyHelperMain` agent which is responsible for handling the policy and agreement related queries. It tells the user about the company's policies and agreements. 
 
-##### Tools
+### Tools
 
 `WarrantyReturns` and `TechnicalIssues` agents asks customer his/her `customer_id` in the beginning of the conversation. This is then passed to `gcp_function` via `customerlogs` tool to fetch the customer's previous logs and activities. This helps the agent to understand the customer's previous issues and provide better support.
 
@@ -66,7 +66,7 @@ So the tools are:
 - `policyhelper`: Fetches the company's policies and agreements from the database. It is built using vertex ai agent builder's `Datastores`.
 
 
-#### Visualization and Dashboard
+### Visualization and Dashboard
 
 We store the data when `sessionend` tool is invoked. We maintain a `mongoDB` database to store  `issue_category` and `resolution_status` along with current date and time. This data is then visualized in admin dashboard. The admin dashboard shows the `issue_category` and `resolution_status` of the user's conversation. It also shows the `issue_category` and `resolution_status` of the user's conversation throuch bar and pie charts. 
 
