@@ -182,7 +182,7 @@ Sample Input payload:
 List of valid customer_ids: `3f4e5d6f7g8h9i0j`, `7h8i9j0k1l2m3n4o`, `5x6y7z8a9b0c1d2e`, `9p0q1r2s3t4u5v6w`
 
 
-Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the bottom right corner, you can see the chatbot. You can ask the Type 1 queries on clicking it. On clicking 'Policy' button at top right corner, you enter [https://issue-vertex-bot.vercel.app/policies](https://issue-vertex-bot.vercel.app/policies) page where you can ask the Type 2 queries.
+Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the bottom right corner, you can see the chatbot. You can ask the Type 1 queries on clicking it. On clicking 'Policy' button at top right corner, you enter 'https://issue-vertex-bot.vercel.app/policies' page where you can ask the Type 2 queries.
 
 <img src="https://drive.google.com/uc?export=view&id=10SFEyW7fWMUZ4bFQltljwi4NekpTr7jr" alt="Description" width="700" />
 
@@ -201,25 +201,21 @@ Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the
 
 - `WarrantyReturns` agent asks for the `customer_id`
 
-**User**: "My customer_id is 9p0q1r2s3t4u5v6w"
+**User**: "Yeah sure! My ID is 3r4s5t6u7v8w9x0y"
 
 - `WarrantyReturns` agent fetches the customer's previous logs and activities using `customerlogs` tool.
+- From the logs, it is found that the user has availed the warranty for the product.
 
-**User**: "The product is a laptop and in the warranty portal it is showing that the warranty is yet to be activated. But, I have already activated it."
+**User**: "But in the warranty portal it is showing that the warranty is yet to be activated. But, I have already activated it."
 
 - `WarrantyReturns` agent fetches the similar conversations from the database using `similarconv` tool.
-- `WarrantyReturns` agent asks for serial number and the date of purchase
-
-**User**: "The serial number is 123456789 and the date of purchase is 2022-01-01"
-
 - `WarrantyReturns` agent provides the user with the necessary information.
-- 'WarrantyReturns' agent says 'It seems that you have not activated the warranty for the product. I will help you with the activation process.'
 
-**User**: "Thank you for the information. I will activate the warranty.
+**User**: "Thank you for your assistance."
 
 - `WarrantyReturns` asks for if there is anything else the user wants to know
 
-**User**: "No"
+**User**: "No, that's all. Thank you for your help."
 
 - Handover to `MainChat` agent. `MainChat` agent asks if the user is satisfied with the answer.
 
@@ -227,42 +223,39 @@ Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the
 
 - `MainChat` agent sends the `resolution_status` along with `issue_category` and `conversation` to a GCP function using `sessionend` tool.
 
-**User**: "I have another query regarding my recent purchase."
+**User**: "I have another query regarding some recently launched products"
 
-- `MainChat` agent routes the context to `BillingPayment` agent.
+- `MainChat` agent routes the context to `ProductEnquiry` agent.
+- `ProductEnquiry` agent asks for exact product name or category.
 
-- `BillingPayment` agent asks for the `customer_id`
+**User**: "I want to know about Poco X4"
 
-**User**: "My customer_id is 9p0q1r2s3t4u5v6w"
+- `ProductEnquiry` agent fetches the product details from the database using `productcatalog` tool which is built upon `Datastores`.
+- `ProductEnquiry` agent provides the user with the necessary information.
 
-- `BillingPayment` agent fetches the customer's previous logs and activities using `customerlogs` tool.
-- `BillingPayment` agent asks for the order number
+**User**: "Does it support 5G?"
 
-**User**: "The order ID is 987654321. I was charged twice for the same order."
+- `ProductEnquiry` agent provides the user with the necessary information.
 
-- `BillingPayment` agent fetches the similar conversations from the database using `similarconv` tool.
-- `BillingPayment` agent provides the user with the necessary information.
+**User**: "What colors are available?"
 
-**User**: "Thank you for the information. I will contact the customer care for the refund."
+- `ProductEnquiry` agent provides the user with the necessary information.
 
-- `BillingPayment` tells that it will initiate the refund process.
+**User**: "What is the price of it?"
 
-**User**: "Thank you. How long will the refund take?"
+- `ProductEnquiry` agent provides the user with the necessary information.
 
-- `BillingPayment` tells that the refund will be initiated within 24 hours.
+**User**: "Could you suggest which spec would be the most budget friendly option?"
 
-**User**: "Ok. Thanks for the information."
+- `ProductEnquiry` agent provides the user with the necessary information.
 
-- `BillingPayment` asks if there is anything else the user wants to know.
-
-**User**: "No"
+**User**: "Thank you for the information"
 
 - Handover to `MainChat` agent. `MainChat` agent asks if the user is satisfied with the answer.
 
 **User**: "Yes, I am satisfied with the answer"
 
 - `MainChat` agent sends the `resolution_status` along with `issue_category` and `conversation` to a GCP function using `sessionend` tool.
-
 
 
 ### Type 2:
@@ -271,14 +264,18 @@ Visit our UI at [issue-vertex-bot](https://issue-vertex-bot.vercel.app/). In the
 
 - `PolicyHelperMain` agent treats this as a general query. 
 
-**User**: "I want to know how Xiaomi uses the personal information that is collected from my POCO phone"
+**User**: "I want to know if Xiaomi will leak my personal data, according to the privacy policy of my POCO phone."
 
 - `PolicyHelperMain` agent fetches the company's policies and agreements from the database using `policyhelper` tool.
 - `PolicyHelperMain` agent provides the user with the necessary information.
 
-**User**: "Ok. I have another question, my personal data is safe right?"
+**User**: "Oh that's reassuring! Btw can you explain the rules and obligations I have towards POCO?"
 
 - `PolicyHelperMain` agent fetches the company's privacy policies from the database using `policyhelper` tool.
 - `PolicyHelperMain` agent provides the user with the necessary information.
 
-**User**: "Ohh..ok, thanks for the info. That's all for today"
+**User**: "Ok that's nice to know!"
+
+- 'PolicyHelperMain' agent asks for if there is anything else the user wants to know
+
+**User**: "No, that's all. Thank you for your help."
