@@ -1,0 +1,14 @@
+{
+  "name": "2843934e-e156-4d42-9abd-a7b4372c8068",
+  "displayName": "similarconv",
+  "description": "This is used to retrieve the similar user-chatbot conversations from the past which are stored in our database, in order to understand how the past issues were resolved, and provide suggestions to the user accordingly.",
+  "openApiSpec": {
+    "authentication": {
+      "bearerTokenConfig": {
+        "token": "hello"
+      }
+    }
+  },
+  "schemas": [ "QueryRequest", "SimilarSolutionResponse" ],
+  "toolType": "CUSTOMIZED_TOOL"
+}

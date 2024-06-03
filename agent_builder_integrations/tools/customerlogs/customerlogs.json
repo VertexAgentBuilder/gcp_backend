@@ -1,0 +1,14 @@
+{
+  "name": "516c5f5c-69fe-4104-a9ce-30486cc059ac",
+  "displayName": "customerlogs",
+  "description": "This is used to retrieve the customer activity logs from our database, which will be used to better analyze the customer situation.",
+  "openApiSpec": {
+    "authentication": {
+      "bearerTokenConfig": {
+        "token": "hello"
+      }
+    }
+  },
+  "schemas": [ "LogEntry" ],
+  "toolType": "CUSTOMIZED_TOOL"
+}

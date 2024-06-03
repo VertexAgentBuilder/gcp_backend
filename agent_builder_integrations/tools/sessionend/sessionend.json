@@ -1,0 +1,13 @@
+{
+  "name": "eb06ed85-d462-4ee5-9192-783ab76dfcda",
+  "displayName": "sessionend",
+  "description": "This is used to send information about the list of issues reported by the user in the chat, with each of their issue category name and whether they were resolved or not.",
+  "openApiSpec": {
+    "authentication": {
+      "bearerTokenConfig": {
+        "token": "hello"
+      }
+    }
+  },
+  "toolType": "CUSTOMIZED_TOOL"
+}

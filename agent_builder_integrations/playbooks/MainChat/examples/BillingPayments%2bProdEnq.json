@@ -1,0 +1,100 @@
+{
+  "name": "22441b6b-ba06-43d3-aa1e-4d9a2b28485c",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hello pls help"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi there! I'm from IssueCopilot.AI. Which type of issue can I help you with today: Warranty+Returns or Technical Issues or Billing+Payments or Product Enquiry?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I have a query regarding my recent payment for a product"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/playbooks/28ab5fb9-6ea3-44fb-96ec-3369de8d6288",
+      "playbookInput": {
+        "precedingConversationSummary": "User has queries related to Billing and Payment issues."
+      },
+      "playbookOutput": {
+        "executionSummary": "User is satisfied with the resolution"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Is there anything else you need help with?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yeah I wanted to know more about the Poco x4"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/playbooks/3ab8c65b-9b59-4c6c-8e14-748f622e3667",
+      "playbookInput": {
+        "precedingConversationSummary": "User has questions about a product"
+      },
+      "playbookOutput": {
+        "executionSummary": "User is satisfied with the resolution"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Is there anything you need my assistance with?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No that would be it for today. Thanks!"
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/tools/eb06ed85-d462-4ee5-9192-783ab76dfcda",
+      "action": "endsession",
+      "inputParameters": [ {
+        "name": "requestBody",
+        "value": [ {
+          "issue_category": "Billing or Payments Issues",
+          "resolution_status": true
+        }, {
+          "issue_category": "Product Enquiry Issues",
+          "resolution_status": true
+        } ]
+      } ],
+      "outputParameters": [ {
+        "name": "200",
+        "value": {
+          "res": "Ok thanks"
+        }
+      } ],
+      "inputActionParameters": {
+        "requestBody": [ {
+          "issue_category": "Billing or Payments Issues",
+          "resolution_status": true
+        }, {
+          "issue_category": "Product Enquiry Issues",
+          "resolution_status": true
+        } ]
+      },
+      "outputActionParameters": {
+        "200": {
+          "res": "Ok thanks"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Ok then goodbye! If you have any issues again, you know where to find me ;)"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Thank you for reaching out to IssueCopilot.AI. We are glad we could help you today. Have a great day!"
+  },
+  "displayName": "BillingPayments+ProdEnq",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

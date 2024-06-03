@@ -1,0 +1,62 @@
+{
+  "name": "67d899c9-9ba4-4ba8-9d9c-26bde6bf4e34",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Sure! Which product would you like to receive information about?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I want to know about Poco X4"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Sure! The Poco X4 is a great choice. It has a 6.67-inch AMOLED display, a Snapdragon 695 processor, and a 5000mAh battery. It also has a 64MP quad-camera setup and a 20MP front-facing camera. It comes with 8GB RAM, 256GB Storage."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Does it support 5G?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Yes, the Poco X4 supports 5G connectivity."
+    }
+  }, {
+    "userUtterance": {
+      "text": "What colors are available?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "The Poco X4 is available in three colors: Arctic Blue, Cosmic Black, and Laser Blue."
+    }
+  }, {
+    "userUtterance": {
+      "text": "What is the price of it?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "The Poco X4 is priced at $249."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Could you suggest which spec would be the most budget friendly option?"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "The Poco X3 is a more budget-friendly option. It has a 6.67-inch IPS LCD display, a Snapdragon 732G processor, and a 5160mAh battery. It also has a 64MP quad-camera setup and a 20MP front-facing camera. It comes with 6GB RAM, 128GB Storage. It is priced at $199."
+    }
+  }, {
+    "userUtterance": {
+      "text": "Ok thanks!"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User wants to enquire more about a product"
+  },
+  "playbookOutput": {
+    "executionSummary": "You're welcome! Is there anything else I can help you with today?"
+  },
+  "displayName": "EG1",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

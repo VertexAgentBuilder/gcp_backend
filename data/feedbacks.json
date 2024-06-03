@@ -1,0 +1,22 @@
+[
+    {
+        "resolution_status": true,
+        "issue_category": "Product Enquiry Issues",
+        "timestamp": "2024-06-03 04:13:40"
+    },
+    {
+        "resolution_status": false,
+        "issue_category": "Billing or Payments Issues",
+        "timestamp": "2024-06-03 04:13:40"
+    },
+    {
+        "resolution_status": true,
+        "issue_category": "Product Enquiry Issues",
+        "timestamp": "2024-06-03 04:14:02"
+    },
+    {
+        "resolution_status": false,
+        "issue_category": "Billing or Payments Issues",
+        "timestamp": "2024-06-03 04:14:02"
+    }
+]

@@ -1,0 +1,54 @@
+{
+  "name": "36a17326-1831-4635-9b1b-1ef4d854d6e7",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "I'm sorry to hear that. Can you please provide me with the details of the issue you are facing?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "The Sim card is not getting detected in my phone."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I understand. Let's try to troubleshoot the issue. Have you tried restarting the phone or reinserting the Sim card?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes, I have tried both but the issue still persists."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I see. Can you tell me what status is shown in the network settings of the phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "It shows 'No Sim card detected'"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hmm...weird! Can you tell the OS version of your phone?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "It is Android 9.1.1"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I see. Can you try updating the OS to the latest version and see if that resolves the issue?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Thank you for your suggestion. I will try updating the OS."
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User is facing issues with Technical issues related to SIM card detection"
+  },
+  "playbookOutput": {
+    "executionSummary": "I'm glad I could help. If you have any other questions, please feel free to reach out."
+  },
+  "displayName": "EG1",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

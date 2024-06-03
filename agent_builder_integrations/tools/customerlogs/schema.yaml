@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: Process Text Logs API
+  description: API endpoint for processing and retrieving text logs based on customer ID.
+  version: 1.0.0
+servers:
+  - url: https://us-central1-agentbuilderhackathon.cloudfunctions.net
+paths:
+  /process_text/logs:
+    post:
+      summary: Retrieve logs for a specific customer
+      operationId: logs
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                customer:
+                  type: string
+                  example: 3r4s5t6u7v8w9x0y
+      responses:
+        '200':
+          description: Successfully retrieved logs
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Logs:
+                    type: string
+                    example: >
+                      {
+                        "Date and Time": "2020-01-01 11:58:02", 
+                        "Log": "Purchased Poco X2 for 15,000 INR from dealer Apario Mobiles listed on Amazon."
+                      }
+                      {
+                        "Date and Time": "2020-01-01 12:00:00", 
+                        "Log": "Product serial number is 123F367890. Product Specification: 6GB RAM, 128GB Storage, 64MP Camera, 4500mAh Battery."
+                      }
+components:
+  schemas:
+    LogEntry:
+      type: object
+      properties:
+        Date and Time:
+          type: string
+          format: date-time
+        Log:
+          type: string

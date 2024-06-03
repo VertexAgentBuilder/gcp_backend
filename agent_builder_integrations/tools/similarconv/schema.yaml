@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Process Text API
+  description: This API processes text to provide similar solutions based on the input query.
+  version: 1.0.0
+servers:
+  - url: https://us-central1-agentbuilderhackathon.cloudfunctions.net
+    description: Main server
+paths:
+  /process_text/simsolution:
+    post:
+      summary: Process the input text to find a similar solution.
+      operationId: simsolution
+      description: This endpoint processes the input text and returns a similar solution based on the query provided.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  example: "I have an issue with my warranty policy. It is not activated yet."
+      responses:
+        '200':
+          description: A similar solution is found and returned.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Similar Solution:
+                    type: string
+                    example: "System: Hello! How can I help you today?\nCustomer: I have availed the warranty for my product. But, I am facing some issues with it.\nSystem: I am sorry to hear that. Can you please provide me with the details of the product and the issue you are facing?\nCustomer: Sure. The product is a laptop and in the warranty portal it is showing that the warranty is yet to be activated."
+        '400':
+          description: Bad request, likely due to invalid input.
+        '500':
+          description: Internal server error.
+components:
+  schemas:
+    QueryRequest:
+      type: object
+      properties:
+        query:
+          type: string
+          example: "I have an issue with my warranty policy. It is not activated yet."
+    SimilarSolutionResponse:
+      type: object
+      properties:
+        Similar Solution:
+          type: string
+          example: "System: Hello! How can I help you today?\nCustomer: I have availed the warranty for my product. But, I am facing some issues with it.\nSystem: I am sorry to hear that. Can you please provide me with the details of the product and the issue you are facing?\nCustomer: Sure. The product is a laptop and in the warranty portal it is showing that the warranty is yet to be activated."

@@ -1,0 +1,222 @@
+[
+    {
+        "Customer": "3f4e5d6f7g8h9i0j",
+        "Logs": [
+            {
+                "Date and Time": "2020-01-01 11:58:02",
+                "Log": "Purchased Poco X2 for 15,000 INR from dealer Apario Mobiles listed on Amazon."
+            },
+            {
+                "Date and Time": "2020-01-01 12:00:00",
+                "Log": "Product serial number is 123F367890. Prodct Specification: 6GB RAM, 128GB Storage, 64MP Camera, 4500mAh Battery."
+            },
+            {
+                "Date and Time": "2020-01-01 12:00:01",
+                "Log": "Payment mode is Credit Card. Downpayment is 5,000 INR. EMI for 6 months is 1,000 INR."
+            },
+            {
+                "Date and Time": "2020-01-01 12:00:02",
+                "Log": "Opted for Extended Warranty for 1 year. Product serial number is 123F367890"
+            },
+            {
+                "Date and Time": "2020-01-01 14:20:02",
+                "Log": "Product(123F367890) delivered on 2020-01-02 14:20:02."
+            },
+            {
+                "Date and Time": "2020-01-02 14:50:14",
+                "Log": "Registered Product(123F367890) in company portal. Customer ID is 3f4e5d6f7g8h9i0j. Customer Name is Mr. Ankit Kumar, Address is 123, 4th Cross, 5th Main, Bangalore, Karnataka, India."
+            },
+            {
+                "Date and Time": "2020-01-02 14:50:15",
+                "Log": "Activated Extended Warranty for product(123F367890)."
+            },
+            {
+                "Date and Time": "2020-01-02 14:51:00",
+                "Log": "Product(123F367890) Activated Successfully. Warranty Expiry Date is 2021-01-02."
+            }
+        ]
+    },
+    {
+        "Customer": "7h8i9j0k1l2m3n4o",
+        "Logs": [
+            {
+                "Date and Time": "2021-02-15 09:45:00",
+                "Log": "Purchased Poco M6 S21 for 70,000 INR from dealer TechMart listed on Flipkart."
+            },
+            {
+                "Date and Time": "2021-02-15 09:47:30",
+                "Log": "Product serial number is 456G789012. Product Specification: 8GB RAM, 256GB Storage, 108MP Camera, 5000mAh Battery."
+            },
+            {
+                "Date and Time": "2021-02-15 09:48:00",
+                "Log": "Payment mode is Debit Card. Downpayment is 20,000 INR. EMI for 5 months is 10,000 INR."
+            },
+            {
+                "Date and Time": "2021-02-15 09:48:30",
+                "Log": "Opted for Extended Warranty for 2 years. Product serial number is 456G789012."
+            },
+            {
+                "Date and Time": "2021-02-16 16:30:00",
+                "Log": "Product (456G789012) delivered on 2021-02-16 16:30:00."
+            },
+            {
+                "Date and Time": "2021-02-16 17:00:00",
+                "Log": "Registered Product (456G789012) in company portal. Customer ID is 7h8i9j0k1l2m3n4o. Customer Name is Ms. Priya Singh, Address is 789, 2nd Street, 3rd Avenue, Mumbai, Maharashtra, India."
+            },
+            {
+                "Date and Time": "2021-02-16 17:10:00",
+                "Log": "Activated Extended Warranty for product (456G789012)."
+            },
+            {
+                "Date and Time": "2021-02-16 17:15:00",
+                "Log": "Product (456G789012) Activated Successfully. Warranty Expiry Date is 2023-02-16."
+            },
+            {
+                "Date and Time": "2021-04-10 11:20:45",
+                "Log": "Customer reported an issue with the product (456G789012). Battery draining quickly."
+            },
+            {
+                "Date and Time": "2021-04-11 13:00:00",
+                "Log": "Product (456G789012) picked up for service from Customer Address."
+            },
+            {
+                "Date and Time": "2021-04-15 14:30:00",
+                "Log": "Product (456G789012) serviced and returned to Customer. Issue resolved: Battery replaced."
+            },
+            {
+                "Date and Time": "2021-06-20 09:50:30",
+                "Log": "Customer called support for assistance with connecting to Wi-Fi for product (456G789012)."
+            },
+            {
+                "Date and Time": "2021-06-21 10:15:00",
+                "Log": "Issue resolved: Wi-Fi connectivity restored for product (456G789012)."
+            }
+        ]
+    },
+    {
+        "Customer": "5x6y7z8a9b0c1d2e",
+        "Logs": [
+            {
+                "Date and Time": "2021-11-05 15:30:00",
+                "Log": "Purchased Poco C64 for 15,000 INR from dealer MobileWorld listed on Amazon."
+            },
+            {
+                "Date and Time": "2021-11-05 15:32:45",
+                "Log": "Product serial number is 789H123456. Product Specification: 4GB RAM, 128GB Storage, 12MP Camera, 3095mAh Battery."
+            },
+            {
+                "Date and Time": "2021-11-05 15:33:30",
+                "Log": "Payment mode is Net Banking. Full payment made."
+            },
+            {
+                "Date and Time": "2021-11-05 15:35:00",
+                "Log": "Opted for AppleCare+ for 2 years. Product serial number is 789H123456."
+            },
+            {
+                "Date and Time": "2021-11-06 18:00:00",
+                "Log": "Product (789H123456) delivered on 2021-11-06 18:00:00."
+            },
+            {
+                "Date and Time": "2021-11-06 18:30:00",
+                "Log": "Registered Product (789H123456) in company portal. Customer ID is 5x6y7z8a9b0c1d2e. Customer Name is Mr. Rahul Sharma, Address is 456, 1st Block, 2nd Phase, Chennai, Tamil Nadu, India."
+            },
+            {
+                "Date and Time": "2021-11-06 18:45:00",
+                "Log": "Activated AppleCare+ for product (789H123456)."
+            },
+            {
+                "Date and Time": "2021-11-06 19:00:00",
+                "Log": "Product (789H123456) Activated Successfully. AppleCare+ Expiry Date is 2023-11-06."
+            },
+            {
+                "Date and Time": "2022-01-10 14:10:15",
+                "Log": "Customer reported an issue with the product (789H123456). Face ID not working."
+            },
+            {
+                "Date and Time": "2022-01-11 10:00:00",
+                "Log": "Product (789H123456) picked up for service from Customer Address."
+            },
+            {
+                "Date and Time": "2022-01-15 16:30:00",
+                "Log": "Product (789H123456) serviced and returned to Customer. Issue resolved: Face ID sensor replaced."
+            },
+            {
+                "Date and Time": "2022-03-20 11:25:00",
+                "Log": "Customer called support for assistance with Android update for product (789H123456)."
+            },
+            {
+                "Date and Time": "2022-03-21 12:00:00",
+                "Log": "iOS update completed for product (789H123456)."
+            },
+            {
+                "Date and Time": "2022-07-05 15:40:00",
+                "Log": "Customer reported an issue with the product (789H123456). Charging port not working."
+            },
+            {
+                "Date and Time": "2022-07-06 09:00:00",
+                "Log": "Product (789H123456) picked up for service from Customer Address."
+            },
+            {
+                "Date and Time": "2022-07-10 17:15:00",
+                "Log": "Product (789H123456) serviced and returned to Customer. Issue resolved: Charging port repaired."
+            }
+        ]
+    },
+    {
+        "Customer": "9p0q1r2s3t4u5v6w",
+        "Logs": [
+            {
+                "Date and Time": "2023-03-20 10:15:00",
+                "Log": "Purchased Poco X4 for 20,000 INR from offline retail store Reliance."
+            },
+            {
+                "Date and Time": "2023-03-20 10:17:30",
+                "Log": "Product serial number is 654J321098. Product Specification: 8GB RAM, 256GB Storage, 64MP Camera, 5160mAh Battery."
+            },
+            {
+                "Date and Time": "2023-03-20 10:18:00",
+                "Log": "Payment mode is UPI. Full payment made."
+            },
+            {
+                "Date and Time": "2023-03-20 10:20:00",
+                "Log": "Opted for Extended Warranty for 1 year. Product serial number is 654J321098."
+            },
+            {
+                "Date and Time": "2023-03-21 12:00:00",
+                "Log": "Product (654J321098) registered in company portal. Customer ID is 9p0q1r2s3t4u5v6w. Customer Name is Ms. Sunita Verma, Address is 78, MG Road, Pune, Maharashtra, India."
+            },
+            {
+                "Date and Time": "2023-03-21 12:05:00",
+                "Log": "Activated Extended Warranty for product (654J321098)."
+            },
+            {
+                "Date and Time": "2023-03-21 12:10:00",
+                "Log": "Product (654J321098) Activated Successfully. Warranty Expiry Date is 2024-03-21."
+            },
+            {
+                "Date and Time": "2023-06-15 14:00:00",
+                "Log": "Customer provided positive feedback. Very satisfied with the performance and battery life of product (654J321098)."
+            },
+            {
+                "Date and Time": "2023-08-10 09:45:00",
+                "Log": "Customer visited store for a routine checkup of product (654J321098). No issues found."
+            },
+            {
+                "Date and Time": "2023-11-25 16:30:00",
+                "Log": "Customer reported a minor issue with the camera focus of product (654J321098)."
+            },
+            {
+                "Date and Time": "2023-11-26 11:00:00",
+                "Log": "Product (654J321098) brought to service center. Camera issue resolved on-site."
+            },
+            {
+                "Date and Time": "2024-02-01 10:20:00",
+                "Log": "Customer called support for assistance with software update for product (654J321098)."
+            },
+            {
+                "Date and Time": "2024-02-02 11:30:00",
+                "Log": "Software update completed for product (654J321098)."
+            }
+        ]
+    }
+]

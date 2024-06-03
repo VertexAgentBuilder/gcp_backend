@@ -1,0 +1,75 @@
+{
+  "name": "b409ee5f-57c2-4def-b325-0668fc064382",
+  "actions": [ {
+    "userUtterance": {
+      "text": "Hi"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Hi there! I'm from IssueCopilot.AI. Which type of issue can I help you with today: Warranty+Returns or Technical Issues or Billing+Payments or Product Enquiry?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I am facing issues with warranty of my product"
+    }
+  }, {
+    "playbookInvocation": {
+      "playbook": "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/playbooks/7b1148e1-c47f-4393-92bc-4bfdc863aa25",
+      "playbookInput": {
+        "precedingConversationSummary": "User has issues related to Warranty or Returns."
+      },
+      "playbookOutput": {
+        "executionSummary": "User is satisfied with the resolution"
+      },
+      "playbookState": "OUTPUT_STATE_OK"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "Is there anything else I can help you with?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "No. I had only that issue, but unfortunately there's no solution."
+    }
+  }, {
+    "toolUse": {
+      "tool": "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/tools/eb06ed85-d462-4ee5-9192-783ab76dfcda",
+      "action": "endsession",
+      "inputParameters": [ {
+        "name": "requestBody",
+        "value": [ {
+          "issue_category": "Warranty or Return Issues",
+          "resolution_status": false
+        } ]
+      } ],
+      "outputParameters": [ {
+        "name": "200",
+        "value": {
+          "res": "Ok thanks"
+        }
+      } ],
+      "inputActionParameters": {
+        "requestBody": [ {
+          "issue_category": "Warranty or Return Issues",
+          "resolution_status": false
+        } ]
+      },
+      "outputActionParameters": {
+        "200": {
+          "res": "Ok thanks"
+        }
+      }
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I can understand your frustration, sadly there's nothing else I can do in this scenario. Have a great day!"
+    }
+  } ],
+  "playbookOutput": {
+    "executionSummary": "Thank you for reaching out to IssueCopilot.AI. We are glad we could help you today. Have a great day!"
+  },
+  "displayName": "WarrantyReturns",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

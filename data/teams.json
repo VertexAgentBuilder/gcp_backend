@@ -1,0 +1,70 @@
+{
+    "teams": [
+        {
+            "teamName": "Warranty and Returns",
+            "Members": [
+                "John Doe",
+                "Jane Doe"
+            ],
+            "Scope": [
+                "If user is not satisfied with the product, then they may ask for a refund or exchange or return",
+                "It checks the warranty of the product and then decides if the product is eligible for return or exchange",
+                "Advise the user on the return and exchange policy",
+                "Tells the user about the procedure to return the product"
+            ]
+        },
+        {
+            "teamName": "Product Enquiry",
+            "Members": [
+                "Jack Frost",
+                "Jill Frost"
+            ],
+            "Scope": [
+                "Answer the user's queries about the product",
+                "Provide information about the product, its features, and specifications",
+                "Help the user in choosing the right product",
+                "Provide information about the product's availability according to the user's location and current inventory"
+            ]
+        },
+        {
+            "teamName": "Order Tracking",
+            "Members": [
+                "Tom Sawyer",
+                "Becky Thatcher"
+            ],
+            "Scope": [
+                "Track the user's order and provide real-time updates",
+                "Inform the user about the status of their order, estimated delivery time, and any delays",
+                "Help the user in case of any issues with the delivery or tracking of the order",
+                "Provide information about the shipping carrier and tracking number"
+            ]
+        },
+        {
+            "teamName": "Technical Support",
+            "Members": [
+                "Sherlock Holmes",
+                "John Watson",
+                "Hercule Poirot"
+            ],
+            "Scope": [
+                "Help the user in troubleshooting technical issues with the product",
+                "Provide guidance on setting up and using the product",
+                "Assist the user in case of software or hardware problems",
+                "Resolve any technical issues related to the product"   
+            ]
+        },
+        {
+            "teamName": "Billing and Payment",
+            "Members": [
+                "Peter Parker",
+                "Mary Jane Watson"
+            ],
+            "Scope": [
+                "Assist the user in billing and payment-related queries",
+                "Help the user in making payments, applying discounts, and using promo codes",
+                "Provide information about payment methods, refund policies, and billing statements",
+                "Resolve any issues related to billing, payment, or transaction errors"
+            ]
+        }
+    ]
+}

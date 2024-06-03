@@ -1,0 +1,46 @@
+{
+  "name": "3814f1fc-86cb-41d2-acb7-d53717119fa6",
+  "actions": [ {
+    "agentUtterance": {
+      "text": "Sorry to know about that. Can you please provide me with more details about the issue?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "The charging is very slow, and sometimes it doesn't charge at all."
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I understand. Let's try to troubleshoot the issue. Have you tried using a different charging cable or charger?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Yes, I have tried different chargers and cables, but the issue persists"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "I see. Can you check the charging port for any dust or debris?"
+    }
+  }, {
+    "userUtterance": {
+      "text": "I have already cleaned it, but it didn't help"
+    }
+  }, {
+    "agentUtterance": {
+      "text": "It might be an issue with the charging port or the battery. I recommend visiting the nearest service center for further diagnosis"
+    }
+  }, {
+    "userUtterance": {
+      "text": "Okay, I will do that. Thanks!"
+    }
+  } ],
+  "playbookInput": {
+    "precedingConversationSummary": "User is facing technical issues with battery"
+  },
+  "playbookOutput": {
+    "executionSummary": "You're welcome. If you have any other questions, please feel free to reach out."
+  },
+  "displayName": "EG2",
+  "retrievalStrategy": "DEFAULT",
+  "conversationState": "OUTPUT_STATE_OK",
+  "languageCode": "en"
+}

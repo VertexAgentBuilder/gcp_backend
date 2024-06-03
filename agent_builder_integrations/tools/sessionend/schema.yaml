@@ -1,0 +1,40 @@
+openapi: 3.0.1
+info:
+  title: End Session API
+  description: API endpoint to process text and end the session
+  version: 1.0.0
+servers:
+  - url: https://us-central1-agentbuilderhackathon.cloudfunctions.net
+paths:
+  /process_text/endsession:
+    post:
+      summary: End the session after processing text
+      operationId: endsession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  issue_category:
+                    type: string
+                    description: Category of the issue
+                    example: Technical Issues
+                  resolution_status:
+                    type: boolean
+                    description: Status of the issue resolution
+                    example: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  res:
+                    type: string
+                    example: Ok thanks

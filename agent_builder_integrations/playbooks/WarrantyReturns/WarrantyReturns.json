@@ -1,0 +1,38 @@
+{
+  "name": "7b1148e1-c47f-4393-92bc-4bfdc863aa25",
+  "displayName": "WarrantyReturns",
+  "goal": "Ask for the Customer ID and retrieve user's past activity logs. Also fetch similar chat conversations history by sending back the exact same user query content. Provide customized solutions based on these combined information, if user is not satisfied with the product and are asking for a refund or exchange or return. ",
+  "steps": [ {
+    "text": "Ask the user for their customer ID"
+  }, {
+    "text": "Use ${TOOL:516c5f5c-69fe-4104-a9ce-30486cc059ac} to retrieve past customer activity logs information about the user, using the customer ID. Provide customized solutions based on this."
+  }, {
+    "text": "Use ${TOOL:2843934e-e156-4d42-9abd-a7b4372c8068} to send back the exact same user query content and fetch chat conversations history that were similar to what the user is currently asking about."
+  }, {
+    "text": "Check the warranty of the product and then decide if the product is eligible for return or exchange"
+  }, {
+    "text": "Advise the user on the return and exchange policy"
+  }, {
+    "text": "Tell the user about the procedure to return the product"
+  }, {
+    "text": "If the issue is resolved, and the user is satisfied, then go back"
+  } ],
+  "referencedTools": [ "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/tools/2843934e-e156-4d42-9abd-a7b4372c8068", "projects/agentbuilderhackathon/locations/us-central1/agents/4fe83929-eb1d-465b-8a99-3b04f1852a0d/tools/516c5f5c-69fe-4104-a9ce-30486cc059ac" ],
+  "instruction": {
+    "steps": [ {
+      "text": "Ask the user for their customer ID"
+    }, {
+      "text": "Use ${TOOL:516c5f5c-69fe-4104-a9ce-30486cc059ac} to retrieve past customer activity logs information about the user, using the customer ID. Provide customized solutions based on this."
+    }, {
+      "text": "Use ${TOOL:2843934e-e156-4d42-9abd-a7b4372c8068} to send back the exact same user query content and fetch chat conversations history that were similar to what the user is currently asking about."
+    }, {
+      "text": "Check the warranty of the product and then decide if the product is eligible for return or exchange"
+    }, {
+      "text": "Advise the user on the return and exchange policy"
+    }, {
+      "text": "Tell the user about the procedure to return the product"
+    }, {
+      "text": "If the issue is resolved, and the user is satisfied, then go back"
+    } ]
+  }
+}
